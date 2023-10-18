@@ -1,0 +1,169 @@
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  color: #227e8f;
+  background-color: #ffffff;
+  font-synthesis: none;
+
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+
+}
+
+#root {
+  margin: 0 auto;
+  border: 1px solid #468a9685;
+  border-radius: 24px;
+  padding: 50px;
+  background-color: white;
+  width: 90%;
+  max-width: 1000px;
+  box-sizing: border-box;
+}
+
+
+/* Inputs */
+input,
+textarea,
+select {
+  width: 100%;
+  height: 30px;
+  margin-bottom: 10px;
+}
+
+
+button {
+  background-color: #007d93;
+  color: #fff;
+  border: none;
+  padding: 10px;
+  width: 100px;
+  margin-top: 20px;
+}
+
+textarea {
+  height: 120px;
+}
+
+table,
+th,
+td {
+  border: 1px solid;
+}
+
+td {
+  padding: 10px;
+}
+
+
+
+a {
+  font-weight: 500;
+  color: #007d93;
+  text-decoration: inherit;
+}
+
+a:hover {
+  color: #6abba3;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background-color: #f1f6f4;
+  padding-top: 4rem;
+}
+
+h1 {
+  font-size: 2.2em;
+
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+  border-bottom: 1px solid #007d9354;
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+}
+
+nav {
+  display: flex;
+  gap: 1.2rem;
+  align-items: center;
+}
+
+footer {
+  border-top: 1px solid #007d936d;
+  text-align: center;
+  padding-top: 1rem;
+  margin-top: 2rem;
+  font-size: 0.8rem;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  width: 30%;
+}
+
+.employeesListItem {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  flex-direction: column;
+  gap: 10px;
+  border-bottom: 1px solid #007d9354;
+}
+
+/* Employees */
+
+
+ul.employees li {
+  flex: 1 0 21%;
+}
+
+.employeesListItem a {
+  color: rgb(124, 183, 140);
+  margin-bottom: 25px;
+  margin-top: 20px;
+}
+
+
+
+.employeeDetails {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.employeeDetails a {
+  margin-right: 30px;
+  margin-top: 30px;
+}
+
+.edit {
+  color: rgb(124, 183, 140);
+}
+
+
+.department {
+  max-width: 300px;
+  margin-bottom: 30px;
+}
+
+.delete {
+  margin-top: 20px;
+  color: rgb(199, 121, 137);
+
+}
