@@ -27,13 +27,11 @@ function CreateEmployee()
         salary: 0,
     }
 
-
-
     async function saveEmployeeToDatabase(e)
     {
         e.preventDefault()
         console.log(formData);
-        const Response = await fetch("http://localhost:8000/api/employees/employee-create",
+        const Response = await fetch(`${import.meta.env.VITE_SERVER_URL}/api/employees/employee-create`,
             {
                 method: "POST",
                 headers: {
@@ -58,8 +56,6 @@ function CreateEmployee()
         }
     }, [isEmployeeSaved]);
 
-
-
     const onChangeHandler = (e) =>
     {
 
@@ -79,7 +75,6 @@ function CreateEmployee()
                 <h1>Add New Employee</h1>
 
                 <form className="bookDetails" onSubmit={saveEmployeeToDatabase} >
-
 
                     <div className="col-1">
                         <label>Firstname</label>
