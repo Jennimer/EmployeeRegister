@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Navigation from '../../components/Navigation';
 import Footer from '../../components/Footer';
-import { Link, useParams } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 
 
 function EditEmployee()
@@ -9,7 +9,7 @@ function EditEmployee()
 
 
     const urlId = useParams();
-    const baseURL = `http://localhost:8000/api/employees/${urlId.id}`;
+    const baseURL = `${import.meta.env.VITE_SERVER_URL}/api/employees/${urlId.id}`;
     const [isEmployeeEdited, setIsEmployeeEdited] = useState(false);
     const [editData, setEditData] = useState({
         firstname: "",
@@ -59,7 +59,7 @@ function EditEmployee()
     {
         e.preventDefault()
         console.log(editData);
-        const Response = await fetch(`http://localhost:8000/api/employees/employee-update/${urlId.id}`,
+        const Response = await fetch(`${import.meta.env.VITE_SERVER_URL}/api/employees/employee-update/${urlId.id}`,
             {
                 method: "PUT",
                 headers: {

@@ -9,7 +9,7 @@ function OneEmployee()
   const urlId = useParams();
 
 
-  const baseUrl = `http://localhost:8000/api/employees/${urlId.id}`;
+  const baseUrl = `${import.meta.env.VITE_SERVER_URL}/api/employees/${urlId.id}`;
 
   useEffect(() =>
   {
@@ -37,7 +37,7 @@ function OneEmployee()
   async function deleteEmployee(currentId)
 
     {
-      const response = await fetch(`http://localhost:8000/api/employees/employee-delete/${currentId}`,
+      const response = await fetch(`${import.meta.env.VITE_SERVER_URL}/api/employees/employee-delete/${currentId}`,
         {
           method: "DELETE",
         }

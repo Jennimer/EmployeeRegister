@@ -5,7 +5,7 @@ import Navigation from "../../components/Navigation";
 
 function Employees()
 {
-    const baseUrl = "http://localhost:8000/api/employees/";
+    const baseUrl = `${import.meta.env.VITE_SERVER_URL}/api/employees/`;
     const [data, setData] = useState([]);
     const [isLoading, setIsLoading] = useState(true);
     const [error, setError] = useState(null);
